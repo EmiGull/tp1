@@ -111,8 +111,8 @@
     <label for="ej4_cent">Grados Centigrados:</label>
     <input type="text" id="ej4_cent">
 
-    <label for="ej4_cels">Grados Celsius:</label>
-    <input type="number" id="ej4_cels">
+    <label for="ej4_far">Grados Farenheit:</label>
+    <input type="number" id="ej4_far">
 
     <label for="ej4_resultado">Resultado:</label>
     <input type="text" id="ej4_resultado">
@@ -123,10 +123,11 @@
         function func_ej4(){
     
            let ej4_cent= parseFloat (document.getElementById('ej4_cent').value);
-           let ej4_cels= parseFloat (document.getElementById('ej4_cels').value);
+           let ej4_far= parseFloat (document.getElementById('ej4_far').value);
+           let resultado = ""
         
-           const ej4_cent = ej4_cels * 1.8 + 32
-        document.getElementById('ej4_resultado').value = suma;
+           const ej4_cent = ej4_far * 1.8 + 32
+        document.getElementById('ej4_resultado').value = resultado;
 
         }
     </script> 
