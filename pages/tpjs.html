@@ -105,6 +105,7 @@
         document.getElementById('ej3_resultado').value = texto;
 
         }
+    
     </script>
 
     <h5>Ejercicio 4</h5>
@@ -131,6 +132,177 @@
 
         }
     </script> 
+
+    <h5>Ejercicio 5</h5>
+    <label for="ej5_palabra">Ingresar una palabra:</label>
+    <input type="text" id="ej5_palabra">
+
+    <button onclick="func_ej5()">Contar letras</button>
+
+    <label for="ej5_nroletras">Cantidad de letras:</label>
+    <input type="number" id="ej5_nroletras">
+
+    <script>
+       function func_ej5(){
+    
+        let ej5_nroletras = parseFloat (document.getElementById('ej5_nroletras').value);
+        let ej5_palabra= ""
+
+        document.getElementById('ej5_palabra').value = letras;
+        ej5_nroletras= letras.length();
+     
+        }
+
+    
+    </script> 
+
+   <h5>Ejercicio 6</h5>
+   <label for="ej6_numero">Ingresar un número:</label>
+   <input type="number" id="ej6_numero">
+
+   <button onclick="func_ej6()">Resolver</button>
+
+   <label for="ej6_tipo">Tipo de número:</label>
+   <input type="text" id="ej6_tipo">
+
+
+   <script>
+    
+    function func_ej6(){
+
+    let ej6_numero= parseFloat (document.getElementById('ej6_numero').value);
+    
+   document.getElementById('ej6_numero').value = numero;
+
+    if(numero%2==0){
+        document.getElementById('ej6_tipo').value = "El nro. es par";
+       
+    }else{
+        
+        document.getElementById('ej6_tipo').value = "El nro. es impar";
+        
+    }
+    
+    }
+</script>
+
+    <h5>Ejercicio 7</h5>
+    <label for="ej7_nro1">Ingresar un número:</label>
+   <input type="number" id="ej7_nro1">
+
+   <label for="ej7_nro2">Ingresar otro número:</label>
+   <input type="number" id="ej7_nro2">
+
+   <button onclick="func_ej7()">Resolver</button>
+   
+   <label for="ej7_resultado">Múltiplos de 3:</label>
+   <input type="number" id="ej7_resultado">
+
+   <script>
+    
+    function func_ej7(){
+
+    let ej7_nro1= parseFloat (document.getElementById('ej7_nro1').value);
+    let ej7_nro2= parseFloat (document.getElementById('ej7_nro2').value);
+    let ej7_resultado= parseFloat (document.getElementById('ej7_resultado').value);
+    
+    
+    for (ej7_resultado=1; ej7_resultado <=ej7_nro2; ej7_resultado++) {
+    {
+
+    if (ej7_resultado % ej7_nro1 == 0){
+    {
+    
+    </script>
+    
+    
+    <h5>Ejercicio 8</h5>
+
+    <label for="ej8_nro">Ingresar un número:</label>
+   <input type="number" id="ej8_nro">
+
+   <button onclick="func_ej8()">Resolver</button>
+   
+   <label for="ej8_resultado">Números primos hasta el nro. ingresado:</label>
+   <input type="number" id="ej8_resultado">
+
+   <script>
+  
+    function func_ej8(){
+        
+    let ej8_nro= parseFloat (document.getElementById('ej8_nro').value);
+    let ej8_resultado= parseFloat (document.getElementById('ej8_resultado').value);
+
+    if(ej8_nro % i === 0) return false;
+        for(let i = 2; i <= ej8_nro; i++)
+            if(ej8_nro % i === 0) return false;
+        }
+    
+    </script>
+
+
+<h5>Ejercicio 9</h5>
+
+<label for="ej9_nombre">Tu nombre:</label>
+<input type="text" id="ej9_nombre">
+   
+<label for="ej9_apellido">Tu apellido:</label>
+<input type="text" id="ej8_apellido">
+
+<label for="ej9_edad">Tu edad:</label>
+<input type="text" id="ej9_edad">
+
+<label for="ej9_ciudad">Tu ciudad de nacimiento:</label>
+<input type="text" id="ej9_ciudad">
+
+<button onclick="func_ej9()">Texto</button>
+
+<label for="resultado">Texto:</label>
+<input type="text" id="resultado">
+
+<script>
+
+    function func_ej9(){
+
+    let ej9_nombre = "ej9_nombre"
+    let ej9_apellido = "ej9_apellido"
+    let ej9_edad = "ej9_edad"
+    let ej9_ciudad = "ej9_ciudad"
+    let resultado = ""
+    
+document.getElementById('resultado').value = 'Mi nombre es "+ej9_nombre+" "+ej9_apellido+", tengo "+ej9_edad+" años. Nací en la ciudad de "+ej9_ciudad+".';
+
+    }
+</script>
+
+
+
+<h5>Ejercicio 10</h5>
+<label for="ej10_nro1">Ingresa un número:</label>
+<input type="number" id="ej10_nro1">
+
+<label for="ej10_nro2">Ingresa otro número:</label>
+<input type="number" id="ej10_nro2">
+
+<button onclick="func_ej10()">Resultados</button>
+
+<label for="ej10_resultados">Resultados:</label>
+<input type="number" id="ej10_resultados">
+
+<script>
+    
+    function func_ej10(){
+
+    let ej10_nro1= parseFloat (document.getElementById('ej10_nro1').value);
+    let ej10_nro2= parseFloat (document.getElementById('ej10_nro2').value);
+    let ej10_resultados= parseFloat (document.getElementById('ej10_resultados').value);
+
+      if ej10_nro1 > ej10_nro2 String
+      ej10_resultados = String  
+
+
+    }
+    </script>
 
 </body>
 </html>
