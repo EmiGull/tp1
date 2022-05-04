@@ -56,29 +56,35 @@ function func_ej3(){
  }
 
 function func_ej4(){
-    
-    let ej4_cent= parseFloat (document.getElementById('ej4_cent').value);
-    let ej4_far= parseFloat (document.getElementById('ej4_far').value);
-    let resultado = ""
- 
-    const ej4_cent = ej4_far * 1.8 + 32
- document.getElementById('ej4_resultado').value = resultado;
+    let ej4_grados_cent= parseFloat (document.getElementById('ej4_grados_cent').value);
+    let ej4_grados_far= parseFloat (document.getElementById('ej4_grados_far').value)
+    let conversion
+    if (!isNaN(ej4_grados_cent)){
+        //calculamos farenheit
+        conversion = (ej4_grados_cent*1.8) + 32
+        document.getElementById('ej4_grados_far').value = conversion;
+    }else{
+         //calculamos centigrados
+         conversion = (ej4_grados_far - 32) * 5/9
+         document.getElementById('ej4_grados_cent').value = conversion;
+    }
+   
+   
 
  }
 
 function func_ej5(){
+    let ej5_palabra = document.getElementById('ej5_palabra').value
     
-    let ej5_nroletras = parseFloat (document.getElementById('ej5_nroletras').value);
-    let ej5_palabra= ""
-
-    document.getElementById('ej5_palabra').value = letras;
-    ej5_nroletras= letras.length();
+    ej5_letras= ej5_palabra.length;
+    
+    document.getElementById('ej5_letras').value = ej5_letras
  
     }
 
 function func_ej6(){
 
-        let ej6_numero= parseFloat (document.getElementById('ej6_numero').value);
+    let ej6_numero= parseFloat(document.getElementById('ej6_numero').value);
         
        document.getElementById('ej6_numero').value = numero;
     
@@ -101,10 +107,13 @@ function func_ej7(){
             
             
             for (ej7_resultado=1; ej7_resultado <=ej7_nro2; ej7_resultado++) {
-            {
+            }
         
             if (ej7_resultado % ej7_nro1 == 0){
-            {
+            }
+        
+            }
+
 
 function func_ej8(){
         
@@ -134,11 +143,12 @@ function func_ej10(){
                     let ej10_nro2= parseFloat (document.getElementById('ej10_nro2').value);
                     let ej10_resultados= parseFloat (document.getElementById('ej10_resultados').value);
                 
-                      if ej10_nro1 > ej10_nro2 String
+                      
                       ej10_resultados = String  
                 
                 
                     }
         
+    
     
         
