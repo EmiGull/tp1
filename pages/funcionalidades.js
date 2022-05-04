@@ -84,11 +84,11 @@ function func_ej5(){
 
 function func_ej6(){
 
-    let ej6_numero= parseFloat(document.getElementById('ej6_numero').value);
-        
-       document.getElementById('ej6_numero').value = numero;
+    let ej6_numero = document.getElementById('ej6_numero').value
     
-        if(numero%2==0){
+    document.getElementById('ej6_numero').value = ej6_numero
+    
+        if(ej6_numero%2==0){
             document.getElementById('ej6_tipo').value = "El nro. es par";
            
         }else{
