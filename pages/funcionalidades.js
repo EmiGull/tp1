@@ -101,53 +101,87 @@ function func_ej6(){
 
 function func_ej7(){
 
-            let ej7_nro1= parseFloat (document.getElementById('ej7_nro1').value);
-            let ej7_nro2= parseFloat (document.getElementById('ej7_nro2').value);
-            let ej7_resultado= parseFloat (document.getElementById('ej7_resultado').value);
-            
-            
-            for (ej7_resultado=1; ej7_resultado <=ej7_nro2; ej7_resultado++) {
-            }
-        
-            if (ej7_resultado % ej7_nro1 == 0){
-            }
-        
-            }
+    let ej7_nro1= parseFloat (document.getElementById('ej7_nro1').value);
+    let ej7_nro2= parseFloat (document.getElementById('ej7_nro2').value);
+    let resultado = ""
+    let comparten = true
+    let múltiplos = 3
+    var módulo1, módulo2
+          
+    while (múltiplos <= ej7_nro1 && múltiplos <= ej7_nro2 && comparten == true) {
+                
+        módulo1 = ej7_nro1%múltiplos 
+        módulo2 = ej7_nro2%múltiplos 
+          
+        if (módulo1 == módulo2) {
+        resultado = resultado + múltiplos + ","
+        múltiplos = múltiplos + 3
+          
+        }else {
+        comparten = false
+        }
+    }
+    document.getElementById("ej7_resultado").value= múltiplos
+}
 
+        
 
 function func_ej8(){
         
-                    let ej8_nro= parseFloat (document.getElementById('ej8_nro').value);
-                    let ej8_resultado= parseFloat (document.getElementById('ej8_resultado').value);
+    let nro = parseInt(document.getElementById ('ej8_nro').value);
+    let resultado= document.getElementById('ej8_resultado');
                 
-                    if(ej8_nro % i === 0) return false;
-                        for(let i = 2; i <= ej8_nro; i++)
-                            if(ej8_nro % i === 0) return false;
-            }
-        
+  const esPrimo = (num) => {
+    for (let i = 2; i < num; i++) {
+      if (num % i === 0) {
+        return false;
+      }
+      return true;
+    }
+  }
+  for (let x = 0; x <= nro; x++) {
+    esPrimo(x) && (resultado.textContent = resultado.innerHTML + " | " + x);
+  }
+
+}
+    
+
 function func_ej9(){
 
-                let ej9_nombre = "ej9_nombre"
-                let ej9_apellido = "ej9_apellido"
-                let ej9_edad = "ej9_edad"
-                let ej9_ciudad = "ej9_ciudad"
-                let resultado = ""
-                
-            document.getElementById('resultado').value = 'Mi nombre es "+ej9_nombre+" "+ej9_apellido+", tengo "+ej9_edad+" años. Nací en la ciudad de "+ej9_ciudad+".';
-            
+    let ej9_nombre= document.getElementById('ej9_nombre').value; 
+        ej9_apellido= document.getElementById('ej9_apellido').value;  
+        ej9_edad= document.getElementById('ej9_edad').value;  
+        ej9_ciudad= document.getElementById('ej9_ciudad').value;  
+
+        
+    ej9_frase= document.getElementById('ej9_frase').value= "Mi nombre es " +ej9_nombre+ " " + ej9_apellido+ "tengo " +ej9_edad+ " años. Nací en la ciudad de "+ej9_ciudad;
+
                 }
+
         
 function func_ej10(){
 
-                    let ej10_nro1= parseFloat (document.getElementById('ej10_nro1').value);
-                    let ej10_nro2= parseFloat (document.getElementById('ej10_nro2').value);
-                    let ej10_resultados= parseFloat (document.getElementById('ej10_resultados').value);
-                
-                      
-                      ej10_resultados = String  
-                
-                
-                    }
+    let nro1= parseInt(document.getElementById('ej10_nro1').value); 
+    let nro2= parseInt(document.getElementById('ej10_nro2').value); 
+    let num = ""
+  
+    if (nro1 > nro2) {
+
+      for (let index = nro1 - 1; index > nro2 ; index--) {
+         num = num + index + ", ";
+     }
+         document.getElementById("ej10_resultado").value = num
+     } 
+
+        if (nro2 > nro1){
+
+          for (let index = nro1 + 1; nro2 > index ; index++) {
+
+              num = num + index + ", ";;
+         }
+          document.getElementById("ej10_resultado").value = num
+    }
+}
         
     
     

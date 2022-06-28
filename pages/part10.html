@@ -146,7 +146,7 @@ function create ()
     stars2 = this.physics.add.group({
         key: 'star2',
         repeat: 5,
-        setXY: { x: 25, y: 0, stepX: 100 }
+        setXY: { x: 25, y: 0, stepX: 50 }
     });
 
     stars2.children.iterate(function (child) {
@@ -160,7 +160,7 @@ function create ()
 
     //  The score
     scoreText = this.add.text(16, 16, 'PUNTOS: 0', { 
-        fontSize: '32px', 
+        fontSize: '50px', 
         fill: '#fff', 
         backgroundColor: '#ff74',
         fontStyle: 'bold italic', 
@@ -224,7 +224,7 @@ function collectStar (player, stars, stars2)
 
     //  Add and update the score
     score += 10;
-    scoreText.setText('Score: ' + score);
+    scoreText.setText('PUNTOS: ' + score);
 
     if (stars.countActive(true) === 0)
     {
@@ -239,7 +239,7 @@ function collectStar (player, stars, stars2)
     stars2.disableBody(true, true);
 
     score += 15;
-    scoreText.setText('Score: ' + score);
+    scoreText.setText('PUNTOS: ' + score);
 
     if (stars2.countActive(true) === 0)
     {
@@ -250,10 +250,16 @@ function collectStar (player, stars, stars2)
   
     }
 
-    var x = (player.x < 400) ? Phaser.Math.Between(400, 800) : Phaser.Math.Between(0, 400);
+    var x 
+    if (player.x < 400) {
+        x = Phaser.Math.Between(400, 800);
+    }  
+    else {
+        x = Phaser.Math.Between(0, 400);
+    }
 
     var bomb = bombs.create(x, 16, 'bomb');
-    bomb.setBounce(1);
+    bomb.setBounce(0.5);
     bomb.setCollideWorldBounds(true);
     bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
     bomb.allowGravity = false;
